@@ -1,0 +1,169 @@
+﻿<UserControl x:Class="DnD.Character.Sheet"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DnD.Character"
+             mc:Ignorable="d" >
+    <Grid Margin="0,0,0,4" Background="Black">
+        <GroupBox x:Name="grpCharacterInformation" Header="Character Information" Height="155" Margin="10,40,10,0" VerticalAlignment="Top">
+            <Grid Margin="10,10,10,10">
+                <TextBox x:Name="txtCharacterName" HorizontalAlignment="Left" Height="20" Margin="14,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
+                <Label x:Name="label" Content="Character Name:" HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBackGround" HorizontalAlignment="Left" Height="20" Margin="14,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="145"/>
+                <Label x:Name="label_Copy" Content="Background:" HorizontalAlignment="Left" Margin="10,54,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtClass" HorizontalAlignment="Left" Height="20" Margin="288,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="131"/>
+                <Label x:Name="label_Copy1" Content="Class:" HorizontalAlignment="Left" Margin="284,3,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtRace" HorizontalAlignment="Left" Height="20" Margin="424,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="105"/>
+                <Label x:Name="label_Copy2" Content="Race:" HorizontalAlignment="Left" Margin="424,3,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtLevel" HorizontalAlignment="Left" Height="20" Margin="534,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="65"/>
+                <TextBox x:Name="txtXP" HorizontalAlignment="Left" Height="20" Margin="604,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="105"/>
+                <TextBox x:Name="txtNextLevel" HorizontalAlignment="Left" Height="20" Margin="714,29,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="105"/>
+                <Label x:Name="label_Copy3" Content="Level:" HorizontalAlignment="Left" Margin="534,3,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy4" Content="XP" HorizontalAlignment="Left" Margin="604,3,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy5" Content="Next Level:" HorizontalAlignment="Left" Margin="714,3,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtIdeals" HorizontalAlignment="Left" Height="20" Margin="164,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+                <Label x:Name="label_Copy6" Content="Ideals" HorizontalAlignment="Left" Margin="164,54,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtBonds" HorizontalAlignment="Left" Height="20" Margin="319,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+                <TextBox x:Name="txtFlaws" HorizontalAlignment="Left" Height="20" Margin="474,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="150"/>
+                <TextBox x:Name="txtDeity" HorizontalAlignment="Left" Height="20" Margin="629,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="105"/>
+                <Label x:Name="label_Copy7" Content="Bonds:" HorizontalAlignment="Left" Margin="319,54,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy8" Content="Flaws:" HorizontalAlignment="Left" Margin="474,54,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label_Copy9" Content="Deity:" HorizontalAlignment="Left" Margin="629,54,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtAlignment" HorizontalAlignment="Left" Height="20" Margin="739,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="67"/>
+                <Label x:Name="label_Copy10" Content="Alignment:" HorizontalAlignment="Left" Margin="739,54,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtProfession" HorizontalAlignment="Left" Height="20" Margin="811,80,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="93"/>
+                <Label x:Name="label_Copy11" Content="Profession:" HorizontalAlignment="Left" Margin="811,54,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="grpDescription" Header="Description" Margin="10,200,10,0" VerticalAlignment="Top" Height="270">
+            <Grid Margin="10,0,0,8">
+                <Label x:Name="label1" Content="Size" HorizontalAlignment="Left" Height="31" Margin="10,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtSize" HorizontalAlignment="Left" Height="25" Margin="10,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy" Content="Height" HorizontalAlignment="Left" Height="31" Margin="90,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtHeight" HorizontalAlignment="Left" Height="25" Margin="90,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy1" Content="Weight" HorizontalAlignment="Left" Height="31" Margin="170,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtWeight" HorizontalAlignment="Left" Height="25" Margin="170,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy2" Content="Hair" HorizontalAlignment="Left" Height="31" Margin="250,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtHair" HorizontalAlignment="Left" Height="25" Margin="250,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy3" Content="Eyes" HorizontalAlignment="Left" Height="31" Margin="330,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtEyes" HorizontalAlignment="Left" Height="25" Margin="330,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy4" Content="Age" HorizontalAlignment="Left" Height="31" Margin="410,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtGender" HorizontalAlignment="Left" Height="25" Margin="490,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label1_Copy5" Content="Gender" HorizontalAlignment="Left" Height="31" Margin="490,8,0,0" VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="25" Margin="410,44,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="75"/>
+                <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="112" Margin="10,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="395"/>
+                <Label x:Name="label1_Copy6" Content="Description" HorizontalAlignment="Left" Height="31" Margin="10,74,0,0" VerticalAlignment="Top" Width="75"/>
+                <Label x:Name="label2" Content="Languages" HorizontalAlignment="Left" Margin="410,79,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="txtLanguages" HorizontalAlignment="Left" Height="24" Margin="410,110,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="514" />
+                <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Height="45" Margin="609,34,0,0" VerticalAlignment="Top" Width="100" Click="button_Click"/>
+                <TextBox x:Name="textBox16" HorizontalAlignment="Left" Height="23" Margin="490,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+            </Grid>
+        </GroupBox>
+
+        <!--Ability Scores Section-->
+        <GroupBox x:Name="groupBox" Header="Ability Scores" HorizontalAlignment="Left" Height="285" Margin="10,475,0,0" VerticalAlignment="Top" Width="340" d:IsLocked="True">
+            <StackPanel Height="245" Margin="-1,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="330" >
+                <StackPanel Height="25" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="labelStat1" Margin="0, 0, 5, 0" HorizontalContentAlignment="Center" VerticalAlignment="Center" Width="25" Content=""/>
+                    <Label x:Name="labelStat2" Margin="2, 0, 2, 0" HorizontalContentAlignment="Center"  Width="50" Content="Base"/>
+                    <Label x:Name="labelStat3" Margin="2, 0, 2, 0" HorizontalContentAlignment="Center" Width="50" Content="Race"/>
+                    <Label x:Name="labelStat4" Margin="2, 0, 2, 0" HorizontalContentAlignment="Center" Width="50" Content="Misc"/>
+                    <Label x:Name="labelStat5" Margin="2, 0, 2, 0" HorizontalContentAlignment="Center" Width="50" Content="Temp"/>
+                    <Label x:Name="labelStat6" Margin="2, 0, 2, 0" HorizontalContentAlignment="Center" Width="50" Content="Mod"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl21" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25" Content="Str"/>
+                    <TextBox x:Name="textBox17" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy1" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy2" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl7" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25"  Content="Dex"/>
+                    <TextBox x:Name="textBox19" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox20" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy3" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy4" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy5" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl8" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25"  Content="Con"/>
+                    <TextBox x:Name="textBox21" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox22" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy6" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy7" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy8" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl9" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25"  Content="Int"/>
+                    <TextBox x:Name="textBox23" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox24" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy9" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy10" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy11" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl10" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25"  Content="Wis"/>
+                    <TextBox x:Name="textBox25" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox26" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy12" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy13" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy14" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal" Margin="10,2">
+                    <Label x:Name="lbl11" Margin="0, 0, 5, 0" HorizontalContentAlignment="Right" VerticalAlignment="Center" Width="25"  Content="Cha"/>
+                    <TextBox x:Name="textBox27" Margin="5, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox28" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy15" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy16" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                    <TextBox x:Name="textBox18_Copy17" Margin="2, 0, 2, 0" TextWrapping="NoWrap" Text="" Width="50" VerticalContentAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="GroupBox" HorizontalAlignment="Left" Height="390" Margin="355,475,0,0" VerticalAlignment="Top" Width="611">
+            <Grid>
+                <Label x:Name="label4" Content="HP:" HorizontalAlignment="Left" Margin="69,54,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label5" Content="Damage" HorizontalAlignment="Left" Margin="84,144,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" Margin="84,175,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" Margin="69,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <Label x:Name="label6" Content="AC:" HorizontalAlignment="Left" Margin="309,44,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label7" Content="Prof:" HorizontalAlignment="Left" Margin="254,108,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="label8" Content="Saves:" HorizontalAlignment="Left" Margin="32,234,0,0" VerticalAlignment="Top"/>
+                <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="23" Margin="7,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="65"/>
+                <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="23" Margin="254,134,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox9" HorizontalAlignment="Left" Height="23" Margin="254,75,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+                <TextBox x:Name="textBox10" HorizontalAlignment="Left" Height="23" Margin="77,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="62"/>
+                <TextBox x:Name="textBox11" HorizontalAlignment="Left" Height="23" Margin="204,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+                <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="23" Margin="144,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+                <TextBox x:Name="textBox13" HorizontalAlignment="Left" Height="23" Margin="259,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+                <TextBox x:Name="textBox14" HorizontalAlignment="Left" Height="23" Margin="319,264,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+            </Grid>
+        </GroupBox>
+        <Menu x:Name="menu" Height="25" VerticalAlignment="Top">
+            <MenuItem Header="File" Margin="0">
+                <MenuItem Header="Open" HorizontalAlignment="Right" Width="98"/>
+                <MenuItem Header="Save" HorizontalAlignment="Right" Width="98"/>
+                <Separator HorizontalAlignment="Left" Height="1" Width="125"/>
+                <MenuItem Header="Exit" HorizontalAlignment="Right" Width="98" />
+            </MenuItem>
+            <MenuItem Header="Edit" Margin="0" Height="25" VerticalAlignment="Top">
+                <MenuItem Header="Copy" HorizontalAlignment="Left" Width="98"/>
+                <MenuItem Header="Clear" HorizontalAlignment="Left" Width="98"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel HorizontalAlignment="Left" Height="160" Margin="140,780,0,0" VerticalAlignment="Top" Width="90">
+
+            <Label x:Name="lbl1" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Strength"/>
+            <Label x:Name="lbl2" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Dexterity"/>
+            <Label x:Name="lbl3" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Constitution"/>
+            <Label x:Name="lbl4" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Intelligence"/>
+            <Label x:Name="lbl5" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Wisdom"/>
+            <Label x:Name="lbl6" Margin="0,10,0,0" HorizontalAlignment="Right" Content="Charisma"/>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

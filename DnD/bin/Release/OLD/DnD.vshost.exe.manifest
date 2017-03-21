@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="DnD.exe" version="1.0.0.8" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="DnD" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="DnD.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.SqlServerCe.Client" version="4.0.0.0" publicKeyToken="89845DCD8080CC91" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DnD.exe" size="2439624">
+      <assemblyIdentity name="DnD" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dFBKc8zJYgMJpwFcpucgNEtSj6jLRln+D++Ju1QAIPg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="DnD.exe.config" size="1194">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/4b1GlHsu1P6eXEP3JCaj50U78PBuSyMbAY/rd77TWM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Curse of Strahd Bestiary 1.1.0.xml" size="51423" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OIMbu3/wweNU0xIp1M2PlP5HHu2aKI06tcOJSZyinK4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Hoard of the Dragon Queen Bestiary 1.2.2.xml" size="30989" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q/eJUEcF5bi1/HZiGxnqg3fXBk5zhgwNavJvCashY4I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Monster Manual Bestiary 2.5.0.xml" size="881011" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0XX5pUa3lFEE04j9NdfFBP7/GLkdXVfQxOWufICPWsg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Out of the Abyss 1.3.0.xml" size="89060" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AKCnrPsdSa7xdCLgziBTsZ8boEBaroP+DUiIap76NRI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Phandelver Bestiary 1.2.1.xml" size="7401" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RbrKim1nqsRrICblp3URhDxikY/DjJL2P5P56YojINA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Player Bestiary 2.4.0.xml" size="169098" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zA4QQL6qKI8ONhSJuNDQpkw41Kka1VpCZ1tuuNCrEj4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Princes of the Apocalypse Bestiary 1.2.1.xml" size="88252" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>0MlqNnUX284P6DuHn8kR/TOmFiC4+avRyRwY99FWQVE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Storm King's Thunder Bestiary 1.0.0.xml" size="54794" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7T8oNoUPXjQNlktRJ+arbbXbW2am1JXcnkpGXFWA5bY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\The Rise of Tiamat Bestiary 1.2.1.xml" size="19625" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UReSVROGB8nmcUtlf1gKu0jU3fLVPg79cYtfWtuMXTU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Bestiary\Volo's Bestiary 1.0.1.xml" size="321938" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AgyfbLiKPKzhA7k/BdwNCwK3aS04PIZQdSG3/DHlqTQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Character Files\Backgrounds 1.6.0.xml" size="45055" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K1act2QTYDyKkoJT0OT0MRq3tYJOsedUoymvKLy8YNM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Character Files\Classes 2.6.0.xml" size="585712" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IhekWlXAOHSurtVozgGp1FEH7sVBALc0nu+fvAnPn1c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Character Files\Feats 1.4.1.xml" size="42865" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w1YzVgAaSXUtrJBzbuRiJKGy/+t6n3wkPlKhp8oNHy8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Character Files\Races 2.0.xml" size="66331" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z8M5nugXpkrIE+eVShup1FGyhDc6aiqVGqil6+8R8Jo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Compendiums\Bestiary Compendium 2.0.1.xml" size="1502015" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YN9hC0QAFE/ByXgQwpiJJ7YaBQTkie8zdLz0XmFsBTM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Compendiums\Character Compendium 2.0.0.xml" size="771697" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>23J+2UndlBXB2ZJlh4EROQFl62iTANdBYqhhzjNT41U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Compendiums\Items Compendium 1.6.0.xml" size="1091570" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8Th/W78Sd4KPVPWOth0Gs/+iOuf9pvCHoJsxLMcDl1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Compendiums\Spells Compendium 1.2.1.xml" size="484961" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9kGrdMV6Q5l5dz2hH4lYW0XRK8oa8BSFl6BVPBNMoZw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Futuristic Items 1.2.xml" size="24599" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>y3pWGigr7TaOpZU31i5jaHfdbTFHxOH2QME4H6ml5dM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Magic Items 5.2.xml" size="954062" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+jiZAhGFPHKmsk9x+dmfaUr87eMWAOG2AavrAnqM/w4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Modern Items 1.2.xml" size="111805" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Mx1ka8vx1lC4fkK6ZbsHvaGXcin1fpNm90o1Z1aHQyU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Mundane Items 2.7.0.xml" size="129612" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RLH8yWawmH+zG2byyxYDW0N+4fp9Xrz5dTUoqS00dAE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Renaissance Items 1.3.xml" size="23111" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ofV1Uuqxsrq5NEm3/TXIll3HeHmDPXOWL98ezTNJpQI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Items\Valuable Items 1.2.0.xml" size="23846" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Q591IqtcQR77c3bm4iD+wH8d2rdbSV9n0wirvO1uKec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Spells\EE Spells 2.6.xml" size="50457" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CU2wJYJKCygQ9U1QSkulQ7ojQGDW9IbsSh44JWLjquM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Spells\Modern Spells 1.1.xml" size="17326" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dkkP7dEYAdzhSj8TaIntPz5AnwrcCw/mUH7+Fxw0NNQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Spells\PHB Spells 3.8.1.xml" size="438230" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eKx0AXwvsRH8+jl7Kw+VPRv2uv3ECY4jzolgJ86UYcI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Spells\SCAG Spells 1.2.xml" size="3870" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>XyvU1qKBgJunVy/LwZmd0vhWkfTrAIwtNjd7bpir3OI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Unearthed Arcana\UA_Demon Summoning 1.0.xml.xml" size="7536" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>CM6hudGoS5y2RGaSyk+3P971PLWFpp6HjXIFS/gGAhY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="DnDAppFiles\Unearthed Arcana\UA_Races 1.0.1.xml.xml" size="10302" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>PBByHEN2UW9CgBnq2ZkD+gb3XosVOmzQ9BQvu4AMTmU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="RandomDungeon.html" size="260330">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5odVilYtNrxN1lceft+64fYrgaNmh69OA6WZghZovTI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="XML\Compendiums\Characters.xml" size="771697" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>23J+2UndlBXB2ZJlh4EROQFl62iTANdBYqhhzjNT41U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="XML\Compendiums\Items.xml" size="1091570" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8Th/W78Sd4KPVPWOth0Gs/+iOuf9pvCHoJsxLMcDl1o=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="XML\Compendiums\Monsters.xml" size="1502015" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>YN9hC0QAFE/ByXgQwpiJJ7YaBQTkie8zdLz0XmFsBTM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="XML\Compendiums\Spells.xml" size="484961" writeableType="applicationData">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9kGrdMV6Q5l5dz2hH4lYW0XRK8oa8BSFl6BVPBNMoZw=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>

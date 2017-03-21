@@ -1,0 +1,20 @@
+﻿DnD
+
+
+winexe
+C#
+.cs
+C:\Users\aaronk\Documents\Visual Studio 2015\Projects\DnD\DnD\obj\Debug\
+DnD
+none
+false
+DEBUG;TRACE
+C:\Users\aaronk\Documents\Visual Studio 2015\Projects\DnD\DnD\App.xaml
+15854089575
+4-1527281159
+591108743767
+17-1367677928
+Campaign\CampaignManager.xaml;Character\AbilityScores.xaml;Character\Sheet.xaml;Character\CharacterSheet.xaml;Combat\CombatManager.xaml;NPC\MonsterFlowDocumentReader.xaml;Control\StatBlock.xaml;DnDAppClasses\FlowDocumentReaderMain.xaml;DnDAppClasses\StatBlockFlowDocument.xaml;DnDAppClasses\StatBlockWindow.xaml;NPC\MonsterViewer.xaml;MainWindow.xaml;NPC\Monsters.xaml;Themes\CustomHodgePodge.xaml;Themes\ExpressionDark.xaml;
+
+False
+

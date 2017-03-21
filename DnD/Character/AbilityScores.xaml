@@ -1,0 +1,113 @@
+﻿<Window x:Class="DnD.Character.AbilityScores"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD.Character"
+        mc:Ignorable="d"
+        Title="Ability Scores" Height="762" Width="524" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Height="340" Margin="10,10,0,0" VerticalAlignment="Top" Width="375">
+            <Grid Margin="10,10,10,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel HorizontalAlignment="Left" Height="289" Margin="10,10,0,0" VerticalAlignment="Top" Width="45">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="0,10,0,0"/>
+                        </Style>
+
+                    </StackPanel.Resources>
+                    <Label x:Name="label43" Content="Stat" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3" Content="Str" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3_Copy" Content="Dex" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3_Copy1" Content="Con" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3_Copy2" Content="Int" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3_Copy3" Content="Wis" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+                    <Label x:Name="label3_Copy4" Content="Cha" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" HorizontalContentAlignment="Right"/>
+
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="278" Margin="60,21,0,0" VerticalAlignment="Top" Width="49" >
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="5,10,5,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label x:Name="label13" Content="Base" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" />
+                    <TextBox x:Name="textBox" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy1" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy2" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy3" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy4" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="278" Margin="114,21,0,0" VerticalAlignment="Top" Width="49" >
+                    <StackPanel.Resources>
+
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="5,10,5,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label x:Name="label131" Content="Race" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" />
+                    <TextBox x:Name="textBox1" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy5" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy6" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy7" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy8" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy9" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="278" Margin="168,21,0,0" VerticalAlignment="Top" Width="49" >
+                    <StackPanel.Resources>
+
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="5,10,5,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label x:Name="label123" Content="Misc" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" />
+                    <TextBox x:Name="textBox2" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy10" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy11" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy12" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy13" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy14" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="278" Margin="222,21,0,0" VerticalAlignment="Top" Width="49" >
+                    <StackPanel.Resources>
+
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="5,10,5,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label x:Name="label313" Content="Total" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="40" />
+                    <TextBox x:Name="textBox3" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy15" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy16" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy17" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy18" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy19" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="278" Margin="276,21,0,0" VerticalAlignment="Top" Width="58" >
+                    <StackPanel.Resources>
+
+                        <Style TargetType="{x:Type TextBox}">
+                            <Setter Property="Margin" Value="5,10,5,0"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label x:Name="label513" Content="Bonus" Height="30" VerticalAlignment="Top" Width="55" />
+                    <TextBox x:Name="textBox4" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy20" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy21" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy22" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy23" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                    <TextBox x:Name="textBox_Copy24" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" />
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <Label x:Name="label" Content="Remaining" HorizontalAlignment="Left" Margin="445,35,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtRemaining" HorizontalAlignment="Left" Height="60" Margin="400,80,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="80"/>
+        <CheckBox x:Name="chkPointBuy" Content="Point Buy" HorizontalAlignment="Left" Margin="400,155,0,0" VerticalAlignment="Top" Checked="chkPointBuy_Checked"/>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Margin="410,270,0,0" VerticalAlignment="Top" Width="80" Height="25" Click="btnOK_Click"/>
+
+    </Grid>
+</Window>

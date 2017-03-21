@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns:local="clr-namespace:DnD" StartupUri="MainWindow.xaml" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Application.Resources>
+        <!--<Style TargetType="TextBox">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="White" />
+                            <GradientStop Offset="1.0" Color="WhiteSmoke" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS" />
+            <Setter Property="FontSize" Value="14" />
+        </Style>
+        <Style TargetType="Grid" x:Key="MainBackground">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Offset="0.0" Color="#FFB6B6B6" />
+                            <GradientStop Offset="1.0" Color="#FF646464" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>-->
+    <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes\CustomHodgePodge.xaml" />
+                <!--<ResourceDictionary Source="DnDAppClasses\StatBlockflowDocument.xaml" />-->
+                <!--
+                <ResourceDictionary Source="Themes\BureauBlack.xaml" />
+                <ResourceDictionary Source="Themes\BureauBlue.xaml" />
+                <ResourceDictionary Source="Themes\ExpressionDark.xaml" />
+                <ResourceDictionary Source="Themes\ExpressionLight.xaml" />
+                <ResourceDictionary Source="Themes\ShinyBlue.xaml" />
+                <ResourceDictionary Source="Themes\ShinyRed.xaml" />
+                <ResourceDictionary Source="Themes\WhistlerBlue.xaml" />
+                -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary></Application.Resources>
+</Application>

@@ -1,0 +1,192 @@
+﻿<Window x:Class="DnD.NPC.StatBlockWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD.DnDAppClasses"
+        mc:Ignorable="d"
+        Title="StatBlockWindow" Height="817" Width="479" Loaded="Window_Loaded">
+    <Grid>
+        <Viewbox Stretch="Fill">
+            <Grid Background="#FFFDF1DC" Margin="0,0,0,0" Height="437">
+                <Rectangle Fill="#FFE69A28"
+		                   Height="5"
+		                   Stroke="Black" StrokeThickness="1"
+		                   VerticalAlignment="Top" Margin="0,0,1,0"/>
+                <Label x:Name="lblMonsterName" Content="Animated Armor" Height="25" Margin="10,10,9,0" VerticalAlignment="Top" Background="Black" Foreground="#FFAC2F2F" FontFamily="Calisto MT" FontSize="22" FontWeight="SemiBold"/>
+                <Label x:Name="lblMonsterType" Content="Medium construct, unaligned" Height="15" Margin="10,35,9,0" VerticalAlignment="Top" Foreground="Black"  FontStyle="Italic" FontSize="10"/>
+                <Line X1="10" Y1="55" X2="275" Y2="55" StrokeThickness="4" StrokeEndLineCap="Triangle" >
+                    <Line.Stroke>
+                        <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF892323" Offset="0"/>
+                            <GradientStop Color="#FFF19797" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+                <Label Content="Armor Class" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="10"/>
+                <Label Content="Hit Points" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="10"/>
+                <Label Content="Speed" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="10"/>
+
+                <Label x:Name="lblAC" Margin="71,63,12,0" VerticalAlignment="Top" Foreground="#FF000000" FontSize="8" FontFamily="Calisto MT" Height="9"/>
+                <Label x:Name="lblHP" Content="22 (6d8 + 6)" Margin="60,77,12,0" VerticalAlignment="Top" Foreground="#FF000000" FontSize="8" FontFamily="Calisto MT"/>
+                <Label x:Name="lblSpeed" Content="25 ft" Margin="41,90,12,0" VerticalAlignment="Top" Foreground="#FF000000" FontSize="8" FontFamily="Calisto MT"/>
+
+                <Line X1="10" Y1="110" X2="275" Y2="110" StrokeThickness="4" StrokeEndLineCap="Triangle" >
+                    <Line.Stroke>
+                        <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF892323" Offset="0"/>
+                            <GradientStop Color="#FFF19797" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+
+
+                <Line X1="10" Y1="150" X2="275" Y2="150" StrokeThickness="4" StrokeEndLineCap="Triangle" >
+                    <Line.Stroke>
+                        <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF892323" Offset="0"/>
+                            <GradientStop Color="#FFF19797" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+                <StackPanel HorizontalAlignment="Left" Height="20" Margin="10,110,0,0" VerticalAlignment="Top" Width="279" Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                        </Style>
+                    </StackPanel.Resources>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="20" Margin="10,125,0,0" VerticalAlignment="Top" Width="279" Orientation="Horizontal">
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="Margin" Value="15,0,0,0"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                        </Style>
+                    </StackPanel.Resources>
+                </StackPanel>
+                <Grid HorizontalAlignment="Left" Height="38" Margin="10,112,0,0" VerticalAlignment="Top" Width="270" >
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Label}">
+                            <Setter Property="VerticalAlignment" Value="Top"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="20*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
+                    </Grid.RowDefinitions>
+                    <Label Content="STR" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" />
+                    <Label Content="DEX" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" Grid.Column="1" />
+                    <Label Content="CON" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" Grid.Column="2" />
+                    <Label Content="INT" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" Grid.Column="3" />
+                    <Label Content="WIS" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" Grid.Column="4" />
+                    <Label Content="CHA" Foreground="#FFAC2F2F" FontWeight="Bold" FontFamily="Calisto MT" FontSize="9" Grid.Column="5" />
+                    
+                    <Label x:Name="lblStr" Content="14 (+2)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Row="1"/>
+                    <Label x:Name="lblDex" Content="11 (+0)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Column="1" Grid.Row="1"/>
+                    <Label x:Name="lblCon" Content="13 (+1)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Column="2"  Grid.Row="1"/>
+                    <Label x:Name="lblInt" Content="1 (-5)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Column="3"  Grid.Row="1"/>
+                    <Label x:Name="lblWis" Content="3 (-4)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Column="4"  Grid.Row="1"/>
+                    <Label x:Name="lblCha" Content="1 (-5)" Foreground="#FFAC2F2F" FontWeight="Medium" FontFamily="Calisto MT" FontSize="8" Grid.Column="5"  Grid.Row="1"/>
+                </Grid>
+                <WrapPanel Margin="10,155,10,135" Orientation="Vertical">
+                    <WrapPanel.Resources>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Margin" Value="0,5,0,0"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                        </Style>
+                    </WrapPanel.Resources>
+                    <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" FontFamily="Calisto MT" FontSize="9">
+                <Run FontWeight="Bold" Text="Damage Immunities"/><Run Text=" "/>
+                <Run FontWeight="Medium" Text="poison, psychic"/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" FontFamily="Calisto MT">
+                <Run FontSize="9" FontWeight="Bold" Text="Condition Immunities"/><Run Text=" "/>
+                <Run FontSize="9" FontWeight="Medium" Text="blinded, charmed, deafened, exhaustion, frightened, paralyzed, petrified, poisoned"/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" FontFamily="Calisto MT" FontSize="9">
+                <Run FontWeight="Bold" Text="Senses"/>
+                <Run FontWeight="Medium" Text="blindsight 60 ft. (blind beyond this radius), passive Perception 6"/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" FontFamily="Calisto MT" FontSize="9">
+                <Run FontWeight="Bold" Text="Languages"/>
+                <Run FontWeight="Medium" Text="-"/>
+                    </TextBlock>
+                    <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="263" FontFamily="Calisto MT" FontSize="9">
+                <Run FontWeight="Bold" Text="Challenge"/>
+                <Run FontWeight="Medium" Text="1 (200 XP)"/>
+                    </TextBlock>
+                </WrapPanel>
+                <Line X1="10" Y1="270" X2="275" Y2="270" StrokeThickness="4" StrokeEndLineCap="Triangle" >
+                    <Line.Stroke>
+                        <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF892323" Offset="0"/>
+                            <GradientStop Color="#FFF19797" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+                <TextBlock HorizontalAlignment="Left" Height="50" Margin="10,275,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Calisto MT" FontSize="9">
+            <Run FontWeight="Bold" FontStyle="Italic" Text="Antimagic Susceptibility. "/>
+            <Run FontWeight="Normal" Text="The armor is incapacitated while in the area of an antimagic field. If targeted by dispel magic, the armor must succeed on a Constitution saving throw against the caster's spell save DC or fall unconscious for 1 minute."/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="10,325,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Calisto MT" FontSize="9">
+            <Run FontWeight="Bold" FontStyle="Italic" Text="False Appearance. "/>
+            <Run FontWeight="Normal" Text="While the armor remains motionless, it is indistinguishable from a normal suit of armor."/>
+                </TextBlock>
+                <Label x:Name="lblMonsterName_Copy" Content="Actions" HorizontalAlignment="Left" Height="25" Margin="10,355,0,0" VerticalAlignment="Top" Width="67" Background="Black" Foreground="#FFAC2F2F" FontFamily="Calisto MT" FontSize="16"/>
+                <Line X1="10" Y1="380" X2="275" Y2="380" StrokeThickness="2" StrokeEndLineCap="Triangle" >
+                    <Line.Stroke>
+                        <LinearGradientBrush EndPoint="1,0" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                            <GradientStop Color="#FF892323" Offset="0"/>
+                            <GradientStop Color="#FFF19797" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Line.Stroke>
+                </Line>
+                <TextBlock HorizontalAlignment="Left" Height="15" Margin="10,385,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Calisto MT" FontSize="9">
+            <Run FontWeight="Bold" FontStyle="Italic" Text="Multiattack. "/>
+            <Run FontWeight="Normal" Text="The armor makes two melee attacks."/>
+                </TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="10,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontFamily="Calisto MT" FontSize="9">
+            <Run FontWeight="Bold" FontStyle="Italic" Text="Slam. "/>
+            <Run FontWeight="Normal" Text="Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."/>
+                </TextBlock>
+                <Rectangle Fill="#FFE69A28"
+		   Height="5"
+		   Stroke="Black" StrokeThickness="1"
+		   VerticalAlignment="Bottom" Margin="0,0,1,0"/>
+                <!--<Viewbox HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Margin="0,225,0,0">
+            <Viewbox.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="FontSize" Value="9" />
+                </Style>
+            </Viewbox.Resources>
+            <TextBlock HorizontalAlignment="Left" Foreground="#FFAC2F2F" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" FontFamily="Calisto MT" FontSize="9" Height="15">
+                <Run FontWeight="Bold" Text="Damage Immunities"/><Run Text=" "/>
+                <Run FontWeight="Medium" Text="poison, psychic"/>
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Margin="-1,260,-10,65">
+            <Viewbox.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="0,5,0,0"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                </Style>
+            </Viewbox.Resources>
+        </Viewbox>-->
+
+
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>

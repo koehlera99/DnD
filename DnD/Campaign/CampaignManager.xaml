@@ -1,0 +1,57 @@
+﻿<Window x:Class="DnD.Campaign.CampaignManager"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD"
+        mc:Ignorable="d"
+        Title="CampaignManager" Height="587" Width="939" Loaded="Window_Loaded">
+    <Grid Background="Black">
+        <GroupBox x:Name="groupBox" Header="GroupBox" Margin="10,10,10,0" VerticalAlignment="Top" Height="190">
+            <Grid Margin="10,10,-2,-20">
+                <StackPanel HorizontalAlignment="Left" Height="136" Margin="10,10,0,0" VerticalAlignment="Top" Width="110">
+                    <Label x:Name="label" Target="{x:Reference textBox1}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy" Target="{x:Reference textBox2}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy1" Target="{x:Reference textBox3}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy2" Target="{x:Reference textBox4}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy3" Target="{x:Reference textBox5}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="140" Margin="104,6,0,0" VerticalAlignment="Top" Width="125">
+                    <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="0,2.5"/>
+                    <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="0,2.5"/>
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="0,2.5"/>
+                    <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="0,2.5"/>
+                    <TextBox x:Name="textBox5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="0,2.5"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+        <GroupBox x:Name="groupBox_Copy" Header="Gems" Margin="10,205,10,0" VerticalAlignment="Top" Height="190">
+            <Grid Margin="10,10,-2,-19">
+                <StackPanel HorizontalAlignment="Left" Height="136" Margin="10,10,0,0" VerticalAlignment="Top" Width="110">
+                    <Label x:Name="label1" Target="{x:Reference textBox1}" Content="Gold" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy4" Target="{x:Reference textBox2}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy5" Target="{x:Reference textBox3}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy6" Target="{x:Reference textBox4}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                    <Label x:Name="label_Copy7" Target="{x:Reference textBox5}" Content="Campaign Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="23"  Margin="0,2.5"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Height="140" Margin="104,6,0,0" VerticalAlignment="Top" Width="60">
+                    <TextBox x:Name="txtGold" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox7" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox8" Height="24" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox9" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox10" Height="24" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                </StackPanel>
+
+                <Button x:Name="button" Content="Save" HorizontalAlignment="Left" Margin="274,10,0,0" VerticalAlignment="Top" Width="120" Height="41" Click="button_Click"/>
+                <StackPanel HorizontalAlignment="Left" Height="140" Margin="164,6,0,0" VerticalAlignment="Top" Width="60">
+                    <TextBox x:Name="txtGoldTotal" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox6" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox11" Height="24" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox12" Height="22" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                    <TextBox x:Name="textBox13" Height="24" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="0,2.5,10,2.5"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

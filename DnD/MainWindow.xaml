@@ -1,0 +1,233 @@
+﻿<Window x:Class="DnD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DnD"
+        xmlns:npc="clr-namespace:DnD.NPC"
+        xmlns:charControls="clr-namespace:DnD.Character"
+        xmlns:converter="clr-namespace:DnD"
+        mc:Ignorable="d"
+        Title="DnD - Main" Height="962" Width="1334" Loaded="Window_Loaded" Background="Black" WindowStyle="ThreeDBorderWindow" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <converter:AddConverter x:Key="ListConverter" Parameter="{Binding Response}" />
+        <!--DataTemplate for Published Date column defined in Grid.Resources.  PublishDate is a property on the ItemsSource of type DateTime -->
+        <DataTemplate x:Key="DateTemplate" >
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Text}" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <!--<StackPanel Width="20" Height="30">
+                <Border Background="LightBlue" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="{Binding PublishDate, StringFormat={}{0:MMM}}" FontSize="8" HorizontalAlignment="Center" />
+                </Border>
+                <Border Background="White" BorderBrush="Black" BorderThickness="1">
+                    <TextBlock Text="{Binding PublishDate, StringFormat={}{0:yyyy}}" FontSize="8" FontWeight="Bold" HorizontalAlignment="Center" />
+                </Border>
+                
+            </StackPanel>-->
+        </DataTemplate>
+        <!--DataTemplate for the Published Date column when in edit mode. -->
+        <DataTemplate x:Key="EditingDateTemplate">
+            <DatePicker SelectedDate="{Binding PublishDate}"  />
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Background="Black">
+        <TabControl Padding="0">
+
+            <TabItem Header="Monster Viewer">
+                <!--<npcControls:MonsterViewer x:Name="MainMonsterViewer" Margin="0,0,0,0" />-->
+                <DockPanel LastChildFill="True">
+                    <Menu IsMainMenu="True" DockPanel.Dock="Top">
+                        <MenuItem Header="_File">
+                            <MenuItem Header="_New..." Width="150" IsEnabled="False" />
+                            <MenuItem Header="_Load XML" Click="MenuItem_Click" />
+                            <Separator />
+                            <MenuItem Header="_Save" IsEnabled="False" />
+                            <MenuItem Header="_Print..." Click="MenuPrint_Click" />
+                            <Separator />
+                            <MenuItem Header="_Exit" />
+                        </MenuItem>
+                        <MenuItem Header="_Edit">
+                            <MenuItem Header="_Cut" Command="Cut" Width="150" />
+                            <MenuItem Header="_Copy" Command="Copy" />
+                            <MenuItem Header="_Paste" Command="Paste" />
+                        </MenuItem>
+                        <MenuItem Header="_View" />
+                        <MenuItem Header="_Window" />
+                        <MenuItem Header="_Help" />
+                    </Menu>
+                    <Grid >
+                        <Grid.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFFDF1DC" Offset="0"/>
+                                <GradientStop Color="White" Offset="0.981"/>
+                                <GradientStop Color="#FFFDF1DD" Offset="0.662"/>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="250"/>
+                            <ColumnDefinition Width="100*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <ListBox x:Name="listMonster" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Margin="10,45,0,10" Width="230" ItemsSource="{Binding name}" SelectionChanged="listMonster_SelectionChanged" FontSize="15"/>
+                        <npc:MonsterFlowDocumentReader x:Name="MainFlowReader" Grid.Column="1" Margin="0,0,10,10" />
+                        <Label Content="Monster / NPC" VerticalContentAlignment="Center" Height="30" Margin="10,10,125,0" VerticalAlignment="Top" Foreground="Black" FontWeight="Bold" FontSize="16"/>
+                        <TextBox x:Name="txtFilter" HorizontalAlignment="Left" Height="30" Margin="130,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" TextChanged="txtFilter_TextChanged"/>
+                    </Grid>
+                </DockPanel>
+            </TabItem>
+            <TabItem Header="Monster Creater">
+                <Grid Background="Black" Margin="0,0,4,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120*"/>
+                        <ColumnDefinition Width="209*"/>
+                    </Grid.ColumnDefinitions>
+                    <npc:MonsterFlowDocumentReader x:Name="CustomFlowReader" Grid.Column="1" Margin="0,0,10,10" />
+                    <Grid Margin="10,14,34,60" >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="125"/>
+                            <ColumnDefinition Width="100*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Name:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,5,17,0"/>
+                        <TextBox x:Name="txtName" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,0,-1,0" Grid.Column="1" />
+                        <Label Content="Size:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,32,17,0"/>
+                        <TextBox x:Name="txtSize" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,27,-1,0" Grid.Column="1" />
+                        <Label Content="Type:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,59,17,0"/>
+                        <TextBox x:Name="txtType" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,54,-1,0" Grid.Column="1" />
+                        <Label Content="Alignment:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,86,17,0"/>
+                        <TextBox x:Name="txtAlignment" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,81,-1,0" Grid.Column="1" />
+                        <Label Content="AC:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,114,17,0"/>
+                        <TextBox x:Name="txtAC" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,109,-1,0" Grid.Column="1" />
+                        <Label Content="HP:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,141,17,0"/>
+                        <TextBox x:Name="txtHP" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,136,-1,0" Grid.Column="1" />
+                        <Label Content="Speed:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,168,17,0"/>
+                        <TextBox x:Name="txtSpeed" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,163,-1,0" Grid.Column="1" />
+                        <Label Content="Save:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,195,17,0"/>
+                        <TextBox x:Name="txtSave" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,190,-1,0" Grid.Column="1" />
+                        <Label Content="Skill:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,222,17,0"/>
+                        <TextBox x:Name="txtSkill" Height="23" TextWrapping="Wrap"  VerticalAlignment="Top" Margin="8,217,-1,0" Grid.Column="1"/>
+                        <Label Content="Resist:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,249,17,0"/>
+                        <TextBox x:Name="txtResist" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,244,-1,0" Grid.Column="1" />
+                        <Label Content="Vulnerable:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,277,17,0"/>
+                        <TextBox x:Name="txtVulnerable" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,272,-1,0" Grid.Column="1" />
+                        <Label Content="Immune:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,304,17,0"/>
+                        <TextBox x:Name="txtImmune" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,299,-1,0" Grid.Column="1" />
+                        <Label Content="Condition Immune:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,331,17,0"/>
+                        <TextBox x:Name="txtConditionImmune" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,326,-1,0" Grid.Column="1" />
+                        <Label Content="Senses:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,358,17,0"/>
+                        <TextBox x:Name="txtSenses" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,353,-1,0" Grid.Column="1" />
+                        <Label Content="Passive:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,385,17,0"/>
+                        <TextBox x:Name="txtPassive" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,380,-1,0" Grid.Column="1" />
+                        <Label Content="Languages:" HorizontalContentAlignment="Right" Height="13" VerticalAlignment="Top" Margin="0,412,17,0" />
+                        <TextBox x:Name="txtLanguages" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,407,-1,0" Grid.Column="1" />
+                        <Label Content="CR:" HorizontalContentAlignment="Right" Height="13"  VerticalAlignment="Top" Margin="0,440,17,0"/>
+                        <TextBox x:Name="txtCR" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,435,-1,0" Grid.Column="1" />
+                        <Label Content="Reaction:" HorizontalContentAlignment="Right"  Height="13"  VerticalAlignment="Top" Margin="0,467,17,0"/>
+                        <TextBox x:Name="txtReaction" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="8,462,-1,0" Grid.Column="1" />
+                        <Label Content="Spells:" HorizontalContentAlignment="Right"  Height="13" VerticalAlignment="Top" Margin="0,501,17,0"/>
+                        <TextBox x:Name="txtSpells" Height="75" TextWrapping="Wrap" VerticalAlignment="Top" LostFocus="CustomText_LostFocus" Margin="10,501,-3,0" Grid.Column="1" />
+                        <Button x:Name="btnSave" Content="Save" HorizontalAlignment="Left" Height="45" Margin="158,581,-3,0" VerticalAlignment="Top" Width="155" Click="btnSave_Click" Grid.Column="1"/>
+                    </Grid>
+
+                    <!--<StackPanel  HorizontalAlignment="Left" Height="411" Margin="15,14,0,0" VerticalAlignment="Top" Width="135">
+
+                        <Label Content="Name:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Size:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Type:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Alignment:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="AC:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="HP:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Speed:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Save:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Skill:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Resist:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Vulnerable:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Immune:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Condition Immune:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Senses:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Passive:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Languages:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="CR:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Reaction:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13"  VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Spells:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+
+                        <Label Content="Traits:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Actions:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Reactions:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                        <Label Content="Legendary:" HorizontalContentAlignment="Right" HorizontalAlignment="Left" Height="13" VerticalAlignment="Top" Width="65"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="Left" Height="488" Margin="300,32,0,0" VerticalAlignment="Top" Width="100">
+                        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSize" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtType" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtAlignment" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtAC" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtHP" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSpeed" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSave" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSkill" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtResist" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtVulnerable" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtImmune" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtConditionImmune" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSenses" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtPassive" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+
+                        <TextBox x:Name="txtLanguages" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtCR" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtReaction" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                        <TextBox x:Name="txtSpells" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                    </StackPanel>-->
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Character Sheet">
+                <charControls:Sheet x:Name="MainCharacterSheet" />
+            </TabItem>
+            <TabItem Header="TabItem" HorizontalContentAlignment="Left"  VerticalContentAlignment="Top">
+                <Grid Width="1046" Height="465" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="453*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="btnOOTAEncounterGen" Content="OOTA Encounter Generator" HorizontalAlignment="Left" Height="60" Margin="10,140,0,0" VerticalAlignment="Top" Width="220" FontSize="16" Click="btnOOTAEncounterGen_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btnNPC" Content="NPC" HorizontalAlignment="Left" Height="60" Margin="10,75,0,0" VerticalAlignment="Top" Width="220" FontSize="16" Click="btnNPC_Click" Grid.ColumnSpan="2"/>
+                    <Button x:Name="btnCharacterSheet" Content="Character Creator" HorizontalAlignment="Left" Height="60" Margin="10,10,0,0" VerticalAlignment="Top" Width="220" FontSize="16" Click="btnCharacterSheet_Click" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="What?">
+                <Grid>
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy5" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy6" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy7" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy8" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy9" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy10" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy11" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy12" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy13" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120">
+                        <TextBox.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FF90DDDD" Offset="1"/>
+                                <GradientStop Color="#FF5BFFFF"/>
+                            </LinearGradientBrush>
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBox x:Name="textBox_Copy14" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy15" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="textBox_Copy16" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>

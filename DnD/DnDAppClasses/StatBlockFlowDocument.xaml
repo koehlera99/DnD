@@ -1,0 +1,66 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:local="clr-namespace:DnD.DnDAppClasses"
+              Name="StatBlockFlowDocument"
+              ColumnWidth="400" FontSize="14" FontFamily="Georgia">
+    <Section Background="#FFFDF1DC">
+        <Paragraph Foreground="#FFAC2F2F" FontFamily="Calisto MT" FontSize="22" FontWeight="SemiBold">
+            Animated Armor
+        </Paragraph>
+        <Paragraph FontStyle="Italic" FontSize="10">
+            Medium construct, unaligned
+        </Paragraph>
+        <Table>
+            <Table.Columns>
+                <TableColumn />
+                <TableColumn />
+                <TableColumn />
+                <TableColumn />
+                <TableColumn />
+                <TableColumn />
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+                        <Paragraph>STR</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>DEX</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>CON</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>INT</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>WIS</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>CHA</Paragraph>
+                    </TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>
+                        <Paragraph>14(+2)</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>12(+1)</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>16(+3)</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>14(+2)</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>12(+1)</Paragraph>
+                    </TableCell>
+                    <TableCell>
+                        <Paragraph>16(+3)</Paragraph>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+    </Section>
+    
+</FlowDocument>
