@@ -8,3 +8,5 @@ Includes monsters published on or before 3/15/2017. It uses comunity provided .x
 https://github.com/ceryliae/DnDAppFiles
 
 Future updated files can be loaded from File menu
+
+
